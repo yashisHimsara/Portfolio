@@ -17,7 +17,7 @@ body {
     width: 100%;
     height: 100vh;
     /*background-image: url("assets/img/15cc79fd-7d3d-4c3d-8483-95f4a2b36347-removebg-preview.png");*/
-    background-image: image("assets/img/15cc79fd-7d3d-4c3d-8483-95f4a2b36347-removebg-preview.png");
+    /*background-image: image("assets/img/15cc79fd-7d3d-4c3d-8483-95f4a2b36347-removebg-preview.png");*/
     border-image: image("assets/img/WhatsApp Image 2024-02-14 at 10.13.22 PM.jpeg");
     background-size: cover;
     background-position: center;
