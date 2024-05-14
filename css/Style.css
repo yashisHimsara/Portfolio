@@ -11,16 +11,12 @@ body {
     background: linear-gradient(to bottom right, #000625, #200C1A);
     color: #ffffff;
 }
-
-
 #header{
     width: 100%;
     height: 100vh;
-    /*background-image: url("assets/img/15cc79fd-7d3d-4c3d-8483-95f4a2b36347-removebg-preview.png");*/
-    /*background-image: image("assets/img/15cc79fd-7d3d-4c3d-8483-95f4a2b36347-removebg-preview.png");*/
-    border-image: image("assets/img/WhatsApp Image 2024-02-14 at 10.13.22 PM.jpeg");
+    /*background-image: url("https://github.com/yashisHimsara/Image/blob/master/assets/15cc79fd-7d3d-4c3d-8483-95f4a2b36347-removebg-preview.png?raw=true");*/
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 .container{
     padding: 10px 10%;
@@ -381,4 +377,37 @@ nav .fa-solid{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+.Assignment{
+    width: 100%;
+    height: 100vh;
+}
+.Assignment-Container{
+    position: relative;
+    top: 12%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+.Assignment-Box {
+    width: 30%;
+    height: 40%;
+    flex: 1 1 1rem;
+    background-color: rgba(50, 56, 70, 1);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    color: aliceblue;
+    font-weight: bold;
+    border: 2rem solid #323846;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
