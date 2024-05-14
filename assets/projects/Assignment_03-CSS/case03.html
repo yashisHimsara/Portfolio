@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="assets/normalize.css">
+<style>
+    section{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+
+
+
+    section:first-child>div:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+    /background-color: gray; ! or initial !/
+        border : 10px solid gray;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+    }
+    section:first-child>div>div{
+        width: 180px;
+        aspect-ratio: 1/1;
+        border-radius: 100px;
+        border : 10px solid purple;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+    }
+    section:nth-child(2)>div{
+        width: 180px;
+        aspect-ratio: 1/1;
+        border-radius: 100px;
+        position: absolute;
+        background-color: green;
+        top: -10px;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+    }
+    p{
+        position: absolute;
+        text-align: center;
+        color: white;
+        left: 0;
+        right: 0;
+        top: 90px;
+        bottom: 90px;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    section:nth-child(1)>div:nth-child(2){
+        display: flex;
+        width: 180px;
+        aspect-ratio: 1/1;
+        border-radius: 100px;
+        position: absolute;
+        background-color: deeppink;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+    }
+    section:nth-child(3)>div{
+
+        width: 180px;
+        aspect-ratio: 1/1;
+        border-radius: 100px;
+        position: absolute;
+        background-color: dodgerblue;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+
+
+
+
+</style>
+</head>
+<body>
+<section>
+    <div>
+        <div>
+
+
+        </div>
+
+    </div>
+    <div>
+        <p>Hello</p>
+    </div>
+
+</section>
+<section>
+    <div>
+        <p>Hello</p>
+    </div>
+
+</section>
+<section>
+    <div>
+        <p>Hello</p>
+    </div>
+
+
+</section>
+</body>
+</html>

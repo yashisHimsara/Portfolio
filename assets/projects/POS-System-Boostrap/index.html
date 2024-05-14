@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/fonts/css/all.min.css" rel="stylesheet">
+    <link href="assets/style/style.css" rel="stylesheet">
+</head>
+<body id="body">
+
+<!--            Navigation Bar-->
+
+<nav class="navbar navbar-expand-lg  navbar-dark navtop bg-success">
+    <div class="container-fluid">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <!--                    <a aria-current="page" class="nav-link active navigation" href="index.html" id="linkHome">Home</a>-->
+                    <div id="btnDash" aria-current="page" class="nav-link " style="cursor: pointer">Home</div>
+                </li>
+                <li class="nav-item">
+                    <!--                    <a class="nav-link navigation" href="customer.html" id="linkCustomer">Customers</a>-->
+                    <div id="btnCustomer" class="nav-link" style="cursor: pointer">Customer</div>
+                </li>
+                <li class="nav-item">
+                    <!--                    <a class="nav-link navigation" href="item.html" id="linkItem">Items</a>-->
+                    <div id="btnItem" class="nav-link" style="cursor: pointer">Items</div>
+                </li>
+                <li class="nav-item">
+                    <!--                    <a class="nav-link navigation" href="order.html" id="linkOrder">Orders</a>-->
+                    <div id="btnOrder" class="nav-link" style="cursor: pointer">Orders</div>
+
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<!--                        Home-->
+
+<section id="homediv" class="container-fluid">
+    <div class="row mt-3 mt-lg-0">
+        <div class="col-md-4 mb-4">
+            <div class="stat-card bg-primary d-flex flex-column justify-content-center align-items-center p-3">
+                <h1 class="mb-3">All Customers</h1>
+                <h2>150</h2>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="stat-card bg-success d-flex flex-column justify-content-center align-items-center p-3">
+                <h1 class="mb-3">All Items</h1>
+                <h2>430</h2>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="stat-card bg-warning d-flex flex-column justify-content-center align-items-center p-3">
+                <h1 class="mb-3">All Orders</h1>
+                <h2>3500</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--                    Customer -->
+<section class="container-fluid mt-3 " id="customerForm">
+
+    <section class="row mt-3 justify-content-around">
+        <div class="col-12 col-md-4">
+            <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2 bg-primary">
+                <h1 class="h1 mb-3">Manage Customer</h1>
+                <div class="mb-3">
+                    <label class="form-label" for="srcCusID">Search Customer</label>
+                    <input class="form-control" id="srcCusID" placeholder="Customer ID" type="text">
+                </div>
+                <button class="btn btn-success" id="addCustomer" type="button">Add</button>
+                <button class="btn btn-danger" id="deleteCustomer" type="button">Delete</button>
+                <button class="btn btn-secondary" id="updateCustomer" type="button">Update</button>
+                <button class="btn btn-secondary" id="searchCustomer" type="button">Search</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-5">
+            <div class="mb-3">
+                <label class="form-label" for="cusID" id="lblCusId">Customer ID</label>
+                <input class="form-control" id="cusID" placeholder="C001" type="text">
+                <span class="errorMessageId">cus id is required field: Pattern C00-000</span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="cusName" id="lblcusname">Customer Name</label>
+                <input class="form-control" id="cusName" placeholder="yashis" type="text">
+                <span class="errorMessageName" style="color: red; display: none;">cus Name is a required field</span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="cusAddress" id="lblcusAddress">Customer Address</label>
+                <input class="form-control" id="cusAddress" placeholder="Customer Address" type="text">
+                <span class="errorMessageAddress" style="color: red; display: none;">cus Address is a required field</span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="cusSalary" id="lblcusSalary">Customer Salary</label>
+                <input class="form-control" id="cusSalary" placeholder="Customer Salary" type="text">
+                <span class="errorMessageSalary">cus Salary is required field: Pattern 100.00 or 100</span>
+            </div>
+        </div>
+    </section>
+    <section class="row mt-4 ">
+        <div class="col">
+            <table class="table table-hover" id="cusTable">
+                <thead class="bg-primary">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>CustomerAddress</th>
+                    <th>Customer Salary</th>
+                </tr>
+                </thead>
+                <tbody id="customerTable">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+
+<!--                        Item-->
+<section class="container-fluid mt-3 " id="itemForm">
+    <section class="row mt-3 justify-content-around">
+        <div class="col-12 col-md-4">
+            <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2 manageCustomer bg-primary">
+                <h1 class="h1 mb-3">Manage Item</h1>
+                <div class="mb-3">
+                    <label class="form-label" for="srcItemID">Search Customer</label>
+                    <input class="form-control" id="srcItemID" placeholder="Item ID" type="text">
+                </div>
+                <button class="btn btn-success" id="addItem" type="button">Add</button>
+                <button class="btn btn-danger" id="deleteItem" type="button">Delete</button>
+                <button class="btn btn-secondary" id="updateItem" type="button">Update</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-5">
+            <div class="mb-3">
+                <label class="form-label" for="itemId">Item Id</label>
+                <input class="form-control" id="itemId" placeholder="I001" type="text">
+                <span class="errorMessageItemId">Item Id is required field: Pattern I000</span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="ItemName">Item Name</label>
+                <input class="form-control" id="ItemName" placeholder="Item Name" type="text">
+                <span class="errorMessageItemName">Item Name is a required field</span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="itemQty">Item Qty</label>
+                <input class="form-control" id="itemQty" placeholder="Item Qty" type="text">
+                <span class="errorMessageItemQty">Item Qty is a required field: Pattern positive integer</span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="unitPrice">Unit Price</label>
+                <input class="form-control" id="unitPrice" placeholder="Unit Price" type="text">
+                <span class="errorMessageUnitPrice">Unit Price is required field: Pattern 100.00 or 100</span>
+            </div>
+        </div>
+    </section>
+    <section class="row mt-4">
+        <div class="col">
+            <table class="table table-hover" id="iTable">
+                <thead class="bg-primary">
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Item Qty</th>
+                    <th>Unit Price</th>
+                </tr>
+                </thead>
+                <tbody id="ItemTable">
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+
+<!--                            Orders-->
+
+<section class="container-fluid" id="orderForm">
+    <div class="container " id="placeOrder">
+        <section class="row m-2 rounded-3">
+            <div class="col bg-light m-1 card od">
+                <h5 class="card-header  bg-primary " style="color: black">Customer</h5>
+                <div class="card-body">
+                    <form class="row ">
+                        <div class="row">
+                            <div class="col-md-6">
+<!--                                <label class="form-label fw-bold" for="orderFormCustomerTp">Order Id :</label>-->
+                                <input class="form-control" id="orderId" placeholder="0001" readonly="readonly" required
+                                       type="text">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" for="date">Date :</label>
+                                <input class="form-control" id="date" required type="date">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="form-label fw-bold" for="orderFormCstId">Customer Id :</label>
+                                <select aria-label=".form-select-lg example" class="form-select form-select-sm mb-3" id="orderFormCstId">
+                                    <option>C000<option>
+
+                                </select>
+                            </div>
+                            <div class="col-md-7">
+                                <label class="form-label fw-bold" for="orderFormCusName">Customer Name :</label>
+                                <input class="form-control" id="orderFormCusName" readonly="readonly" required
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12 mt-3 mb-3">
+                                <label class="form-label fw-bold">Salary :</label>
+                                <input class="form-control" id="orderFormCusSalary" placeholder="10000.00" disabled>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 mt-3 mb-3">
+                            <label class="form-label fw-bold">Address :</label>
+                            <input class="form-control" id="orderFormCusAddress" placeholder="Panadura" disabled>
+                        </div>
+<!--                        <div class="row">-->
+<!--                            <div class="col-md-6">-->
+<!--                                <label class="form-label fw-bold" for="orderFormCustomerTp">Customer Tp :</label>-->
+<!--                                <input class="form-control" id="orderFormCustomerTp" readonly="readonly" required-->
+<!--                                       type="text">-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+                    </form>
+                </div>
+            </div>
+
+            <div class="col bg-light m-1 card">
+                <h5 class="card-header bg-primary " style="color: black">Item Select</h5>
+                <div class="card-body">
+                    <form class="row">
+                        <div class="row mb-5">
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemId">Item Id :</label>
+                                <select aria-label="Default select example" class="form-select form-select-sm mb-3"
+                                        id="orderFormItemId">
+                                    <option selected></option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemName" >Item Name :</label>
+                                <input class="form-control" id="orderFormItemName" readonly="readonly" required
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-4 fw-bold">
+                                <label class="form-label" for="orderFormQty">Item Qty :</label>
+                                <input class="form-control" id="orderFormQty" readonly="readonly" type="text">
+                            </div>
+
+                            <div class="col-md-4 fw-bold">
+                                <label class="form-label" for="orderFormPrice">Item Price :</label>
+                                <input class="form-control" id="orderFormPrice" readonly="readonly" required
+                                       type="text">
+                            </div>
+
+                            <div class="col-md-4 fw-bold">
+                                <label class="form-label" for="orderQty">Order Qty :</label>
+                                <input class="form-control" id="orderQty" required type="text">
+                                <span class="errorOrderQty">Please enter a amount lower than: <span id="orderQtyValue"></span></span>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div>
+                            <button class="btn bg-warning p-2 text-dark bg-opacity-50 fw-bold btnAddItem" id="btnAddItem"
+                                    type="button">Add Item
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="col bg-white bg-opacity-10 m-1 card" style="width: 18rem;">
+                <div class="row mb-5">
+                    <div class="card-body">
+                        <div class="col-md-6 fw-bold ">
+                            <label class="form-label text-primary bg-opacity-10" for="total">Total </label>
+                            <h2 class="fw-lighter text-primary bg-opacity-10" id="total">00.00/=</h2>
+                        </div>
+
+                        <div class="col-md-6 fw-bold ">
+                            <label class="form-label text-danger bg-opacity-10" for="subTotal">SubTotal </label>
+                            <h2 class="fw-lighter text-danger bg-opacity-10" id="subTotal">00.00/=</h2>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemName">Cash :</label>
+                                <input class="form-control" id="txtCash" required type="text">
+                            </div>
+
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemName">Discount :</label>
+                                <input class="form-control" id="txtDiscount" readonly="readonly" required type="text">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemName">Balance :</label>
+                                <input class="form-control" id="txtBalance" readonly="readonly" required type="text">
+                            </div>
+
+                            <div class="col-md-6 fw-bold mt-4">
+                                <button class="btn bg-success p-2 text-white bg-opacity-100 fw-bold" id="btnPurchase"
+                                        type="button">Purchase
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="row m-2">
+            <table class="table manageCustomer table-striped mt-5 bg-primary">
+                <thead>
+                <tr>
+                    <th scope="col">Item Id</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody id="orderFormTableBody" style="background-color: white">
+
+                </tbody>
+            </table>
+        </section>
+    </div>
+</section>
+
+<script src="assets/boostrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script type="module" src="assets/js/javaScript.js"></script>
+<script src="/assets/boostrap/js/bootstrap.min.js"></script>
+
+
+<script type="module" src="controller/order.js"></script>
+<script type="module" src="controller/item.js"></script>
+<script type="module" src="controller/customer.js"></script>
+
+</body>
+</html>

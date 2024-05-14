@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment-08</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/normalize.css">
+</head>
+
+<style>
+    #section{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: #36464e;
+    }
+    #div1{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        top: 400px;
+        left: 475px;
+        margin: auto;
+        background-color: red;
+        border-radius: 10px;
+
+    }
+    #div2{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        top: 475px;
+        left: 625px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: green;
+    }
+    #div3{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        top: 475px;
+        left: 775px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: blue;
+    }
+    #div4{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        top: 475px;
+        left: 925px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #fdfd00;
+    }
+    #div5{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        top: 475px;
+        left: 1075px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #fdbecb;
+    }
+    #div6{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        top: 550px;
+        left: 1225px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #eb81ed;
+    }
+
+    #hr-1{
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 460px;
+        bottom: 0;
+        width: 1000px;
+    }
+    #hr-2{
+        position: relative;
+        left: 0;
+        right: 600px;
+        top: 525px;
+        bottom: 0;
+        width: 1000px;
+        margin: auto;
+    }
+</style>
+<body>
+
+    <section id="section">
+        <div id="main div">
+            <div id="div1" >
+            </div>
+            <hr id="hr-1">
+            <div id="div2">
+            </div>
+            <div id="div3">
+            </div>
+            <div id="div4">
+            </div>
+            <div id="div5">
+            </div>
+            <hr id="hr-2">
+            <div id="div6">
+            </div>
+        </div>
+    </section>
+
+    <script src="src/lib/jquery-3.6.1.min.js"></script>
+
+    <script>
+        var array  = ["red", "green", "blue", "yellow", "#fdbecb", "#eb81ed"];
+
+        function Colors() {
+            let c  = array.pop();
+            array.unshift(c)
+            $('#div1').css('background-color', array[0]);
+            $('#div2').css('background-color', array[1]);
+            $('#div3').css('background-color', array[2]);
+            $('#div4').css('background-color', array[3]);
+            $('#div5').css('background-color', array[4]);
+            $('#div6').css('background-color', array[5]);
+        }
+
+         setInterval(Colors, 1000);
+    </script>
+
+</body>
+</html>

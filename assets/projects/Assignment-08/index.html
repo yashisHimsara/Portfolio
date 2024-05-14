@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>person-walking</title>
+</head>
+
+<style>
+    h1{
+        font-weight: bold;
+        font-size: 30px;
+        margin: auto;
+    }
+    #div1{
+        position: absolute;
+        top: 400px;
+        margin: auto;
+    }
+    #div2{
+        position: absolute;
+        top: 400px;
+        left: 425px;
+    }
+    #div3{
+        position: absolute;
+        top: 400px;
+        left: 850px;
+    }
+    #div4{
+        position: absolute;
+        top: 400px;
+        left: 1275px;
+    }
+    #div5{
+        position: absolute;
+        top: 400px;
+        left: 1700px;
+    }
+    #div6{
+        position: absolute;
+        top: 400px;
+        left: 2125px;
+    }
+</style>
+
+
+<body>
+
+<div id="div1">
+    <img src="assets/img/tenor.gif">
+    <h1 id="h1_A">A</h1>
+</div>
+<div id="div2">
+    <img src="assets/img/tenor.gif">
+    <h1 id="h1_B">B</h1>
+</div>
+<div id="div3">
+    <img src="assets/img/tenor.gif">
+    <h1 id="h1_C">C</h1>
+</div>
+<div id="div4">
+    <img src="assets/img/tenor.gif">
+    <h1 id="h1_D">D</h1>
+</div>
+<div id="div5">
+    <img src="assets/img/tenor.gif">
+    <h1 id="h1_E">E</h1>
+</div>
+<div id="div6">
+    <img src="assets/img/tenor.gif" >
+    <h1 id="h1_F">F</h1>
+</div>
+
+</body>
+
+<script src="src/lib/jquery-3.6.1.min.js"></script>
+
+<script>
+  var array = ["A", "B", "C", "D", "E", "F"];
+
+  function Walking(){
+    let lastArray=array.pop();
+    array.unshift(lastArray)
+    $('#h1_A').text(array[0]);
+    $('#h1_B').text(array[1]);
+    $('#h1_C').text(array[2]);
+    $('#h1_D').text(array[3]);
+    $('#h1_E').text(array[4]);
+    $('#h1_F').text(array[5]);
+
+  }
+
+  setInterval(Walking, 1000);
+</script>
+
+</html>
