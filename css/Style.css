@@ -379,7 +379,7 @@ nav .fa-solid{
     display: block;
 }
 .Assignment{
-    width: 100%;
+    width: 50%;
     height: 100vh;
 }
 .Assignment-Container{
@@ -395,8 +395,8 @@ nav .fa-solid{
 }
 
 .Assignment-Box {
-    width: 30%;
-    height: 40%;
+    width: 20%;
+    height: 30%;
     flex: 1 1 1rem;
     background-color: rgba(50, 56, 70, 1);
     padding: 3rem 2rem 4rem;
@@ -410,4 +410,160 @@ nav .fa-solid{
     justify-content: center;
     align-items: center;
 
+}
+#canv {
+    margin-right: 25px;
+    width: 300px;
+    height: 200px;
+}
+
+.assignments {
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 10% 0;
+    flex-direction: column;
+}
+
+.contact {
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 10% 50px;
+    flex-direction: column;
+}
+
+.assignments-all {
+    padding-top: 70px;
+}
+.cards{
+    width: 200px;
+    height: 250px;
+    perspective: 800px;
+}
+.cards_inner{
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+.cards:hover .cards_inner{
+    transform: rotateY(180deg);
+}
+.cards_body{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.cards_body--front{
+    background-image: radial-gradient(circle 248px at center, #5a888a 0%, #7671a6 47%, #92a675 100%);
+}
+.cards_body--back{
+    background-image: linear-gradient(-20deg, #1b0240 0%, #ff9a44 100%);
+    transform: rotateY(180deg);
+}
+
+
+
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    border-radius: 50px;
+    line-height: 1.2;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 36px;
+    border-radius: 22px;
+    color: #858585;
+    overflow: hidden;
+    background: #282828;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content::before {
+    position: absolute;
+    content: "";
+    top: -4%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%);
+    background: rgba(255, 255, 255, 0.18);
+    z-index: -1;
+    transform-origin: bottom;
+
+    border-radius: inherit;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content::after {
+    position: absolute;
+    content: "";
+    top: -8%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%);
+    background: #FFFFFF2D;
+    z-index: -2;
+    transform-origin: bottom;
+    border-radius: inherit;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content svg {
+    width: 48px;
+    height: 48px;
+}
+
+.content .para {
+    z-index: 1;
+    opacity: 1;
+    font-size: 18px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/*.content .link {*/
+/*    z-index: 1;*/
+/*    color: #fea000;*/
+/*    text-decoration: none;*/
+/*    font-family: inherit;*/
+/*    font-size: 16px;*/
+/*    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);*/
+/*}*/
+
+.content .link:hover {
+    text-decoration: underline;
+}
+
+.card:hover {
+    transform: translate(0px, -16px);
+}
+
+.card:hover .content::before {
+    rotate: -8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover .content::after {
+    rotate: 8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
