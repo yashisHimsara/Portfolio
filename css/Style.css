@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -33,7 +34,8 @@ body {
 #homePic{
     position: absolute;
     right: 1vw;
-    bottom: 200px;
+    bottom: 10px;
+    top: 50px;
 }
 
 .container{
@@ -105,12 +107,12 @@ nav ul li a:hover::after{
     color: #ababab;
 }
 
-/*.container {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    padding: 50px 20px;*/
-/*}*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
 
 /*.container .row {*/
 /*    display: flex;*/
@@ -459,7 +461,7 @@ nav .fa-solid{
 }
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url("assets/img/15cc79fd-7d3d-4c3d-8483-95f4a2b36347-removebg-preview.png");
+        /*background-image: url("assets/img/15cc79fd-7d3d-4c3d-8483-95f4a2b36347-removebg-preview.png");*/
     }
     .header-text{
         margin-top: 100%;
@@ -590,7 +592,7 @@ nav .fa-solid{
     width: 300px;
     height: 350px;
     perspective: 800px;
-    margin: 20px; /* Added margin to create gap between cards */
+    margin: 20px;
 }
 
 .cards_inner {
@@ -615,8 +617,9 @@ nav .fa-solid{
 }
 
 .cards_body--front {
-    background-image: radial-gradient(circle 248px at center, #7fa299 0%, #a7ab97 47%, #b2b2b2 100%);
+    background-image: radial-gradient(circle 248px at center, #2c3e50 0%, #34495e 47%, #2f3640 100%);
 }
+
 
 .cards_body--back {
     background-image: linear-gradient(-20deg, #1b0240 0%, #ff9a44 100%);
